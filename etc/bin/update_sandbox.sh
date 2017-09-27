@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 rm -rf baboon/
-git clone git@github.com:behram/baboon.git &&
+git clone git@github.com:baboonenv/baboon.git &&
 cd baboon/ &&
 cp app/config/parameters.yml.dist app/config/parameters.yml &&
 composer install --no-interaction --prefer-dist &&

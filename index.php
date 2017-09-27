@@ -1,5 +1,7 @@
 <?php
-
+foreach (file('.env') as $line){
+    putenv($line);
+}
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
     $charactersLength = strlen($characters);
@@ -21,6 +23,6 @@ Sandbox User<br>
 Username: <b>sandbox</b><br>
 Password: <b>sandbox</b><br>
 <hr>
-Dashboard address: <a href="http://<?php echo $randomString ?>.baboonenv.com:1111" target="_blank">http://<?php echo $randomString ?>.baboonenv.com:1111</a><br>
-Site address: <a href="http://<?php echo $randomString ?>.baboonenv.com" target="_blank">http://<?php echo $randomString ?>.baboonenv.com</a>
+Dashboard address: <a href="http://<?php echo $randomString.'.'.getenv('DOMAIN');?>:1111" target="_blank">http://<?php echo $randomString.'.'.getenv('DOMAIN');?>:1111</a><br>
+Site address: <a href="http://<?php echo $randomString.'.'.getenv('DOMAIN');?>" target="_blank">http://<?php echo $randomString.'.'.getenv('DOMAIN');?></a>
 

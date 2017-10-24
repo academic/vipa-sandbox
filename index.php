@@ -19,10 +19,8 @@ exec('./etc/bin/create_sandbox.sh '.$randomString);
 
 Sandbox Details!<br>
 <hr>
-Sandbox User<br>
-Username: <b>sandbox</b><br>
-Password: <b>sandbox</b><br>
+Sandbox Admin User<br>
+Username: <b>admin</b><br>
+Password: <b>admin</b><br>
 <hr>
-Dashboard address: <a href="http://<?php echo $randomString.'.'.getenv('DOMAIN');?>:1111" target="_blank">http://<?php echo $randomString.'.'.getenv('DOMAIN');?>:1111</a><br>
-Site address: <a href="http://<?php echo $randomString.'.'.getenv('DOMAIN');?>" target="_blank">http://<?php echo $randomString.'.'.getenv('DOMAIN');?></a>
-
+Site address: <a href="http://<?php echo $randomString.'.'.getenv('DOMAIN');?>" target="_blank">http://<?php echo $randomString.'.'.getenv('DOMAIN');?></a><br>

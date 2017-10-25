@@ -11,6 +11,7 @@ then
 	export ELASTICSEARCH_INDEX_NAME=vipa.$1.elastic.index
 	export PROJECT_NAME=VIPA SANDBOX $1
 	export SESSION_NAME=_VIPA_SANBOX_$1_SESSION
+	cat app/config/parameters.yml.box.mustache | mo > app/config/parameters.yml
 	php app/console vipa:install --no-interaction --env=prod
 	php app/console vipa:install:samples --env=prod
     php app/console h4cc_alice_fixtures:load:sets --env=prod

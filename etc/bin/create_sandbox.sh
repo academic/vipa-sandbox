@@ -22,5 +22,6 @@ then
     php app/console vipa:mail:events:sync --sync-desc --env=prod &&
     php app/console vipa:normalize:journal:article:types --env=prod &&
     php app/console fos:elastica:populate --env=prod &&
+    php app/console cache:warmup --env=prod &&
 	echo $(date "+%Y-%m-%d %H:%M:%S") > ./.createtime
 fi
